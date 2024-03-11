@@ -118,120 +118,128 @@ export default function PageDetail() {
 
   return (
     <>
-      <div className="nameDetail">
-        {gameDetail && (
-          <h3 className="text-white flex justify-center">{gameDetail.name}</h3>
-        )}
-      </div>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row justify-center lg:justify-between">
+          <div>
+            {" "}
+            className="lg:w-2/3 lg:mr-4">
+            <div className="nameDetail">
+              {gameDetail && (
+                <h3 className="text-white text-center lg:text-left">
+                  {gameDetail.name}
+                </h3>
+              )}
+            </div>
+            <div className="text-white ">
+              {releasedDate && (
+                <div className="releasedDetail">
+                  <h3>Release Date</h3>
+                  <div>{releasedDate}</div>
+                </div>
+              )}
+              <br />
 
-      <div className="text-white flex flex-row">
-        <div className="info">
-          {releasedDate && (
-            <div className="releasedDetail">
-              <h3>Release Date</h3>
-              <div>{releasedDate}</div>
-            </div>
-          )}
-          <br />
+              {gameDetail && (
+                <>
+                  <div className="desciptionDetailGame">
+                    <h3>Description:</h3>
+                  </div>
+                  <div className="descriptionDetail">
+                    <p>{gameDetail.description}</p>
+                  </div>
+                </>
+              )}
 
-          {gameDetail && (
-            <>
-              <div className="desciptionDetailGame">
-                <h3>Description:</h3>
-              </div>
-              <div className="descriptionDetail">
-                <p>{gameDetail.description}</p>
-              </div>
-            </>
-          )}
-
-          {studioName && (
-            <div className="editorDetail">
-              <h3>Developer</h3>
-              <div>{studioName}</div>
-            </div>
-          )}
-          <br />
-          {tagsName && (
-            <div className="tagsDetail">
-              <h3>Tags</h3>
-              <div>{tagsName}</div>
-            </div>
-          )}
-          <br />
-          {genreGame && (
-            <div className="genreDetail">
-              <h3>Genres</h3>
-              <div>{genreGame}</div>
-            </div>
-          )}
-          <br />
-          {nameEditor && (
-            <div className="editorDetail">
-              <h3>Publisher</h3>
-              <div>{nameEditor}</div>
-            </div>
-          )}
-          <br />
-          {webSite && (
-            <div className="websiteDetail">
-              <h3>Website</h3>
-              <div>
-                <a href={webSite} target="_blank" rel="noopener noreferrer">
-                  {webSite}
-                </a>
-              </div>
-            </div>
-          )}
-          <br />
-          {ratingGame && (
-            <div className="ratingDetail">
-              <h3>Rating</h3>
-              <div>{ratingGame}</div>
-            </div>
-          )}
-          <br />
-          {numberRatings && (
-            <div className="ratingsCountDetail">
-              <h3>Number of Ratings</h3>
-              <div>{numberRatings}</div>
-            </div>
-          )}
-          {/* <a href="https://www.stalker2.com/_nuxt/videos/assets/video/preview.webm">
+              {studioName && (
+                <div className="editorDetail">
+                  <h3>Developer</h3>
+                  <div>{studioName}</div>
+                </div>
+              )}
+              <br />
+              {tagsName && (
+                <div className="tagsDetail">
+                  <h3>Tags</h3>
+                  <div>{tagsName}</div>
+                </div>
+              )}
+              <br />
+              {genreGame && (
+                <div className="genreDetail">
+                  <h3>Genres</h3>
+                  <div>{genreGame}</div>
+                </div>
+              )}
+              <br />
+              {nameEditor && (
+                <div className="editorDetail">
+                  <h3>Publisher</h3>
+                  <div>{nameEditor}</div>
+                </div>
+              )}
+              <br />
+              {webSite && (
+                <div className="websiteDetail">
+                  <h3>Website</h3>
+                  <div>
+                    <a href={webSite} target="_blank" rel="noopener noreferrer">
+                      {webSite}
+                    </a>
+                  </div>
+                </div>
+              )}
+              <br />
+              {ratingGame && (
+                <div className="ratingDetail">
+                  <h3>Rating</h3>
+                  <div>{ratingGame}</div>
+                </div>
+              )}
+              <br />
+              {numberRatings && (
+                <div className="ratingsCountDetail">
+                  <h3>Number of Ratings</h3>
+                  <div>{numberRatings}</div>
+                </div>
+              )}
+              {/* <a href="https://www.stalker2.com/_nuxt/videos/assets/video/preview.webm">
             trailer
           </a> */}
-        </div>
-        <br />
-        <div className="imgandpict">
-          <div className="pictureDetail">
-            {gameDetail && (
-              <>
-                <img
-                  className="imgDetail"
-                  src={gameDetail.background_image}
-                  alt={gameDetail.name}
-                />
-              </>
-            )}
-          </div>
-          <div className="movies">
-            {moviesGame && (
-              <div className="moviesDetail  bg-zinc-950 flex justify-center">
-                <div>{moviesGame}</div>
+            </div>
+            <br />
+            <div className="lg:w-1/3 mt-6 lg:mt-0">
+              <div className="imgandpict">
+                <div className="pictureDetail">
+                  {gameDetail && (
+                    <>
+                      <img
+                        className="imgDetail w-full"
+                        src={gameDetail.background_image}
+                        alt={gameDetail.name}
+                      />
+                    </>
+                  )}
+                </div>
+                <div className="movies">
+                  {moviesGame && (
+                    <div className="moviesDetail  bg-zinc-950 flex justify-center">
+                      <div>{moviesGame}</div>
+                    </div>
+                  )}
+                </div>
               </div>
-            )}
+            </div>
+            <br />
+            <br />
+            <div className="countscreen">
+              {countScreen && (
+                <div className="screenshotsDetail flex flex-col lg:flex-row space-y-4 lg:space-x-4">
+                  {countScreen}
+                </div>
+              )}
+            </div>
           </div>
         </div>
-      </div>
-      <br />
-
-      <br />
-      <div className="countscreen">
-        {countScreen && (
-          <div className="screenshotsDetail flex flex-row space-x-4 size-960 ml-32">
-            {countScreen}
-          </div>
-        )}
       </div>
     </>
   );
