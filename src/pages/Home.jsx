@@ -25,11 +25,22 @@ export default function Home() {
       console.error("Error fetching API data:", error);
     }
   }
+  // async function fetchSearchData(term) {
+  //   try {
+  //     let url = `https://api.rawg.io/api/games?key=${
+  //       process.env.API_KEY
+  //     }&search=${encodeURIComponent(term)}&page_size=1`;
+  //     const response = await fetch(url);
+  //     const data = await response.json();
+  //     setApiData(data.results);
+  //   } catch (error) {
+  //     console.error("Error fetching API search data:", error);
+  //   }
+  // }
+
   async function fetchSearchData(term) {
     try {
-      let url = `https://api.rawg.io/api/games?key=${
-        process.env.API_KEY
-      }&search=${encodeURIComponent(term)}&page_size=1`;
+      let url = `https://api.rawg.io/api/games?key=${process.env.API_KEY}&search=${term}&page_size=1`;
       const response = await fetch(url);
       const data = await response.json();
       setApiData(data.results);
@@ -37,7 +48,6 @@ export default function Home() {
       console.error("Error fetching API search data:", error);
     }
   }
-
   function handleSearchChange(event) {
     const term = event.target.value;
     setSearchTerm(term);
