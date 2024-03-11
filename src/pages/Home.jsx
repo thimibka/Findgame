@@ -16,7 +16,7 @@ export default function Home() {
 
   async function fetchData() {
     try {
-      let url = `https://api.rawg.io/api/games?key=${process.env.API_KEY}&dates=2024-01-01,2024-12-31&page_size=15`;
+      let url = `https://api.rawg.io/api/games?key=${process.env.KEY}&dates=2024-01-01,2024-12-31&page_size=15`;
       const response = await fetch(url);
       const data = await response.json();
       console.log(data);
@@ -28,7 +28,7 @@ export default function Home() {
   // async function fetchSearchData(term) {
   //   try {
   //     let url = `https://api.rawg.io/api/games?key=${
-  //       process.env.API_KEY
+  //       process.env.KEY
   //     }&search=${encodeURIComponent(term)}&page_size=1`;
   //     const response = await fetch(url);
   //     const data = await response.json();
@@ -40,7 +40,7 @@ export default function Home() {
 
   async function fetchSearchData(term) {
     try {
-      let url = `https://api.rawg.io/api/games?key=${process.env.API_KEY}&search=${term}&page_size=1`;
+      let url = `https://api.rawg.io/api/games?key=${process.env.KEY}&search=${term}&page_size=1`;
       const response = await fetch(url);
       const data = await response.json();
       setApiData(data.results);
