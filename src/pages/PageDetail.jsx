@@ -50,7 +50,7 @@ export default function PageDetail() {
   async function getDetailGamesData(idGame) {
     try {
       const response = await fetch(
-        `https://api.rawg.io/api/games/${idGame}?key=${process.env.KEY}`
+        `https://api.rawg.io/api/games/${idGame}?key=e20bd582c8b24dd8abb916be4996dabe`
       );
       const data = await response.json();
       return data;
@@ -62,7 +62,7 @@ export default function PageDetail() {
   async function getDetailGamesMovie(idGame) {
     try {
       const response = await fetch(
-        `https://api.rawg.io/api/games/${idGame}/movies?key=${process.env.KEY}`
+        `https://api.rawg.io/api/games/${idGame}/movies?key=e20bd582c8b24dd8abb916be4996dabe`
       );
 
       const data = await response.json();
@@ -76,7 +76,7 @@ export default function PageDetail() {
   async function getDetailGamesScreenshots(idGame) {
     try {
       const response = await fetch(
-        `https://api.rawg.io/api/games/${idGame}/screenshots?key=${process.env.KEY}`
+        `https://api.rawg.io/api/games/${idGame}/screenshots?key=e20bd582c8b24dd8abb916be4996dabe`
       );
       const data = await response.json();
       return data;
