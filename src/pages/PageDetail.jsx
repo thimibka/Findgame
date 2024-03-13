@@ -50,7 +50,7 @@ export default function PageDetail() {
   async function getDetailGamesData(idGame) {
     try {
       const response = await fetch(
-        `https://api.rawg.io/api/games/${idGame}?key=e20bd582c8b24dd8abb916be4996dabe`
+        `https://api.rawg.io/api/games/${idGame}?key=${import.meta.env.KEY}`
       );
       const data = await response.json();
       return data;
@@ -62,7 +62,9 @@ export default function PageDetail() {
   async function getDetailGamesMovie(idGame) {
     try {
       const response = await fetch(
-        `https://api.rawg.io/api/games/${idGame}/movies?key=e20bd582c8b24dd8abb916be4996dabe`
+        `https://api.rawg.io/api/games/${idGame}/movies?key=${
+          import.meta.env.KEY
+        }`
       );
 
       const data = await response.json();
@@ -76,7 +78,9 @@ export default function PageDetail() {
   async function getDetailGamesScreenshots(idGame) {
     try {
       const response = await fetch(
-        `https://api.rawg.io/api/games/${idGame}/screenshots?key=e20bd582c8b24dd8abb916be4996dabe`
+        `https://api.rawg.io/api/games/${idGame}/screenshots?key=${
+          import.meta.env.KEY
+        }`
       );
       const data = await response.json();
       return data;
@@ -120,9 +124,7 @@ export default function PageDetail() {
     <>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row justify-center lg:justify-between">
-          <div>
-            {" "}
-            className="lg:w-2/3 lg:mr-4">
+          <div className="lg:w-2/3 lg:mr-4">
             <div className="nameDetail">
               {gameDetail && (
                 <h3 className="text-white text-center lg:text-left">
@@ -202,9 +204,6 @@ export default function PageDetail() {
                   <div>{numberRatings}</div>
                 </div>
               )}
-              {/* <a href="https://www.stalker2.com/_nuxt/videos/assets/video/preview.webm">
-            trailer
-          </a> */}
             </div>
             <br />
             <div className="lg:w-1/3 mt-6 lg:mt-0">
