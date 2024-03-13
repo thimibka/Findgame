@@ -135,7 +135,7 @@ export default function Home() {
         <input
           className="placeholder-black bg-gray-400 flex justify-center"
           type="text"
-          placeholder="                         search "
+          placeholder="                    Search ? "
           value={searchTerm}
           onChange={handleSearchChange}
         />
