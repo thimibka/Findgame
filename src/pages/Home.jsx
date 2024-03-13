@@ -10,7 +10,7 @@ import nintendo from "../assets/nintendo.svg";
 import ps from "../assets/ps.svg";
 import ps4 from "../assets/ps4.svg";
 import ps5 from "../assets/ps5.svg";
-import nswitch from "../assets/switch.svg";
+import nswitch from "../assets/nswitch.svg";
 import windows from "../assets/windows.svg";
 import xbox_one from "../assets/xbox_one.svg";
 import xbox_series_x from "../assets/xbox_series_x.svg";
