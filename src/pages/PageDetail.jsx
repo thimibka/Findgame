@@ -143,7 +143,7 @@ export default function PageDetail() {
                     <h3>Description:</h3>
                   </div>
                   <div className="descriptionDetail">
-                    <p>{gameDetail.description}</p>
+                    {gameDetail.description}
                   </div>
                 </>
               )}
