@@ -55,8 +55,8 @@ export default function Home() {
 
     const platformLogos = {
       playstation: "./logo/ps.svg",
-      playstation4: "logo/ps4.svg",
-      playstation5: "logo/ps5.svg",
+      playstation4: "../logo/ps4.svg",
+      playstation5: "../../logo/ps5.svg",
       xbox: "logo/xbox.svg",
       "xbox-one": "logo/xbox_one.svg",
       "xbox-series-x": "logo/xbox_series_x_logo.svg",
