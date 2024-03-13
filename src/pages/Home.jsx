@@ -135,7 +135,7 @@ export default function Home() {
         <input
           className="placeholder-black bg-gray-400 flex justify-center"
           type="text"
-          placeholder="               entrer nom de jeu"
+          placeholder="                         search "
           value={searchTerm}
           onChange={handleSearchChange}
         />
@@ -150,7 +150,7 @@ export default function Home() {
             <img
               src={game.background_image}
               alt={game.name}
-              className="w-full h-96 object-cover"
+              className="w-full h-auto object-cover"
             />
             <button
               className="description"
