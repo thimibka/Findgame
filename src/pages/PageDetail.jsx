@@ -50,7 +50,9 @@ export default function PageDetail() {
   async function getDetailGamesData(idGame) {
     try {
       const response = await fetch(
-        `https://api.rawg.io/api/games/${idGame}?key=${import.meta.env.KEY}`
+        `https://api.rawg.io/api/games/${idGame}?key=${
+          import.meta.env.VITE_API_KEY
+        }`
       );
       const data = await response.json();
       return data;
@@ -63,7 +65,7 @@ export default function PageDetail() {
     try {
       const response = await fetch(
         `https://api.rawg.io/api/games/${idGame}/movies?key=${
-          import.meta.env.KEY
+          import.meta.env.VITE_API_KEY
         }`
       );
 
@@ -79,7 +81,7 @@ export default function PageDetail() {
     try {
       const response = await fetch(
         `https://api.rawg.io/api/games/${idGame}/screenshots?key=${
-          import.meta.env.KEY
+          import.meta.env.VITE_API_KEY
         }`
       );
       const data = await response.json();
