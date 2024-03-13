@@ -118,7 +118,7 @@ export default function PageDetail() {
 
   return (
     <>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className=" max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row justify-center lg:justify-between">
           <div className="lg:w-2/3 lg:mr-4">
             <div className="nameDetail">
@@ -139,12 +139,9 @@ export default function PageDetail() {
 
               {gameDetail && (
                 <>
-                  <div className="desciptionDetailGame">
-                    <h3>Description:</h3>
-                  </div>
-                  <div className="descriptionDetail">
-                    {gameDetail.description}
-                  </div>
+                  <h3>Description:</h3>
+
+                  <div>{gameDetail.description}</div>
                 </>
               )}
 
