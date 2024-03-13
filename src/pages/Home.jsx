@@ -8,6 +8,8 @@ import macos from "../assets/macos.svg";
 import mobile from "../assets/mobile.svg";
 import nintendo from "../assets/nintendo.svg";
 import ps from "../assets/ps.svg";
+import ps3 from "../assets/ps3.svg";
+
 import ps4 from "../assets/ps4.svg";
 import ps5 from "../assets/ps5.svg";
 import nswitch from "../assets/nswitch.svg";
@@ -15,6 +17,7 @@ import windows from "../assets/windows.svg";
 import xbox_one from "../assets/xbox_one.svg";
 import xbox_series_x from "../assets/xbox_series_x.svg";
 import xbox from "../assets/xbox.svg";
+import xbox_360 from "../assets/xbox_360.svg";
 
 export default function Home() {
   const [apiData, setApiData] = useState(null);
@@ -70,9 +73,11 @@ export default function Home() {
 
     const platformLogos = {
       playstation: ps,
+      playstation3: ps3,
       playstation4: ps4,
       playstation5: ps5,
       xbox: xbox,
+      xbox360: xbox_360,
       "xbox-one": xbox_one,
       "xbox-series-x": xbox_series_x,
       "nintendo-switch": nswitch,
