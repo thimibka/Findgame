@@ -17,7 +17,7 @@ export default function Home() {
   async function fetchData() {
     try {
       let url = `https://api.rawg.io/api/games?key=${
-        import.meta.env.VITE_API_KEY
+        import.meta.env.VITE_KEY
       }&dates=2024-01-01,2024-12-31&page_size=15`;
       const response = await fetch(url);
       const data = await response.json();
@@ -30,7 +30,7 @@ export default function Home() {
   async function fetchSearchData(term) {
     try {
       let url = `https://api.rawg.io/api/games?key=${
-        import.meta.env.VITE_API_KEY
+        import.meta.env.VITE_KEY
       }&search=${encodeURIComponent(term)}&page_size=1`;
       const response = await fetch(url);
       const data = await response.json();
