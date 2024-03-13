@@ -1,6 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
+import android from "../assets/android.svg";
+import apple from "../assets/apple.svg";
+import linux from "../assets/linux.svg";
+import macos from "../assets/macos.svg";
+import mobile from "../assets/mobile.svg";
+import nintendo from "../assets/nintendo.svg";
+import ps from "../assets/ps.svg";
+import ps4 from "../assets/ps4.svg";
+import ps5 from "../assets/ps5.svg";
+import nswitch from "../assets/switch.svg";
 import windows from "../assets/windows.svg";
+import xbox_one from "../assets/xbox_one.svg";
+import xbox_series_x from "../assets/xbox_series_x.svg";
+import xbox from "../assets/xbox.svg";
+
 export default function Home() {
   const [apiData, setApiData] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
@@ -54,20 +69,20 @@ export default function Home() {
     }
 
     const platformLogos = {
-      playstation: "./logo/ps.svg",
-      playstation4: "../logo/ps4.svg",
-      playstation5: "../../logo/ps5.svg",
-      xbox: "logo/xbox.svg",
-      "xbox-one": "logo/xbox_one.svg",
-      "xbox-series-x": "logo/xbox_series_x_logo.svg",
-      "nintendo-switch": "logo/switch.svg",
+      playstation: ps,
+      playstation4: ps4,
+      playstation5: ps5,
+      xbox: xbox,
+      "xbox-one": xbox_one,
+      "xbox-series-x": xbox_series_x,
+      "nintendo-switch": nswitch,
       pc: windows,
-      ios: "logo/mobile.svg",
-      nintendo: "logo/nintendo.svg",
-      mac: "logo/apple.svg",
-      macos: "logo/macos.svg",
-      linux: "logo/linux.svg",
-      android: "logo/android.svg",
+      ios: mobile,
+      nintendo: nintendo,
+      mac: apple,
+      macos: macos,
+      linux: linux,
+      android: android,
     };
 
     const existingPlatforms = new Set();
