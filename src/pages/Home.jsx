@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
+import windows from "../assets/windows.svg";
 export default function Home() {
   const [apiData, setApiData] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
@@ -61,7 +61,7 @@ export default function Home() {
       "xbox-one": "logo/xbox_one.svg",
       "xbox-series-x": "logo/xbox_series_x_logo.svg",
       "nintendo-switch": "logo/switch.svg",
-      pc: "logo/windows.svg",
+      pc: windows,
       ios: "logo/mobile.svg",
       nintendo: "logo/nintendo.svg",
       mac: "logo/apple.svg",
