@@ -54,20 +54,20 @@ export default function Home() {
     }
 
     const platformLogos = {
-      playstation: "src/logo/ps.svg",
-      playstation4: "src/logo/ps4.svg",
-      playstation5: "src/logo/ps5.svg",
-      xbox: "src/logo/xbox.svg",
-      "xbox-one": "src/logo/xbox_one.svg",
-      "xbox-series-x": "src/logo/xbox_series_x_logo.svg",
-      "nintendo-switch": "src/logo/switch.svg",
-      pc: "src/logo/windows.svg",
-      ios: "src/logo/mobile.svg",
-      nintendo: "src/logo/nintendo.svg",
-      mac: "src/logo/apple.svg",
-      macos: "src/logo/macos.svg",
-      linux: "src/logo/linux.svg",
-      android: "src/logo/android.svg",
+      playstation: "logo/ps.svg",
+      playstation4: "logo/ps4.svg",
+      playstation5: "logo/ps5.svg",
+      xbox: "logo/xbox.svg",
+      "xbox-one": "logo/xbox_one.svg",
+      "xbox-series-x": "logo/xbox_series_x_logo.svg",
+      "nintendo-switch": "logo/switch.svg",
+      pc: "logo/windows.svg",
+      ios: "logo/mobile.svg",
+      nintendo: "logo/nintendo.svg",
+      mac: "logo/apple.svg",
+      macos: "logo/macos.svg",
+      linux: "logo/linux.svg",
+      android: "logo/android.svg",
     };
 
     const existingPlatforms = new Set();
