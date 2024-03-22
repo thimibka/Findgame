@@ -34,7 +34,7 @@ export default function Home() {
 
   async function fetchData() {
     try {
-      let url = `https://api.rawg.io/api/games?key=b5f1e8e939bc4237bc9384c80f98ecb0&dates=2000-01-01,2024-12-31&page_size=50`;
+      let url = `https://api.rawg.io/api/games?key=b5f1e8e939bc4237bc9384c80f98ecb0&dates=2023-01-01,2030-12-31&page_size=50`;
       const response = await fetch(url);
       const data = await response.json();
       console.log(data);
