@@ -121,17 +121,10 @@ export default function PageDetail() {
       <div className=" max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row justify-center lg:justify-between">
           <div className="lg:w-2/3 lg:mr-4">
-            <div className="nameDetail">
-              {gameDetail && (
-                <h3 className="text-white text-center lg:text-left">
-                  {gameDetail.name}
-                </h3>
-              )}
-            </div>
             <div className="text-white ">
               {releasedDate && (
                 <div className="releasedDetail">
-                  <h3>Release Date</h3>
+                  <h2>Release Date</h2>
                   <div>{releasedDate}</div>
                 </div>
               )}
@@ -139,43 +132,43 @@ export default function PageDetail() {
 
               {gameDetail && (
                 <>
-                  <h3>Description:</h3>
+                  <h2>Description:</h2>
 
                   <div>{gameDetail.description}</div>
                 </>
               )}
-
+              <br />
               {studioName && (
                 <div className="editorDetail">
-                  <h3>Developer</h3>
+                  <h2>Developer</h2>
                   <div>{studioName}</div>
                 </div>
               )}
               <br />
               {tagsName && (
                 <div className="tagsDetail">
-                  <h3>Tags</h3>
+                  <h2>Tags</h2>
                   <div>{tagsName}</div>
                 </div>
               )}
               <br />
               {genreGame && (
                 <div className="genreDetail">
-                  <h3>Genres</h3>
+                  <h2>Genres</h2>
                   <div>{genreGame}</div>
                 </div>
               )}
               <br />
               {nameEditor && (
                 <div className="editorDetail">
-                  <h3>Publisher</h3>
+                  <h2>Publisher</h2>
                   <div>{nameEditor}</div>
                 </div>
               )}
               <br />
               {webSite && (
                 <div className="websiteDetail">
-                  <h3>Website</h3>
+                  <h2>Website</h2>
                   <div>
                     <a href={webSite} target="_blank" rel="noopener noreferrer">
                       {webSite}
@@ -186,14 +179,14 @@ export default function PageDetail() {
               <br />
               {ratingGame && (
                 <div className="ratingDetail">
-                  <h3>Rating</h3>
+                  <h2>Rating</h2>
                   <div>{ratingGame}</div>
                 </div>
               )}
               <br />
               {numberRatings && (
                 <div className="ratingsCountDetail">
-                  <h3>Number of Ratings</h3>
+                  <h2>Number of Ratings</h2>
                   <div>{numberRatings}</div>
                 </div>
               )}
