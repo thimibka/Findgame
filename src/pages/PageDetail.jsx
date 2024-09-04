@@ -21,6 +21,7 @@ export default function PageDetail() {
     const fetchGameDetail = async () => {
       try {
         const gameDetailResponse = await getDetailGamesData(gameId);
+
         setGameDetail(gameDetailResponse);
 
         const movieData = await getDetailGamesMovie(gameId);
@@ -134,7 +135,7 @@ export default function PageDetail() {
                 <>
                   <h2>Description:</h2>
 
-                  <div>{gameDetail.description}</div>
+                  <div>{gameDetail.description_raw}</div>
                 </>
               )}
               <br />
